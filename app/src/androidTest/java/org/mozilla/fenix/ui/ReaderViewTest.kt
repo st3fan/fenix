@@ -135,26 +135,21 @@ class ReaderViewTest {
             verifyReaderViewDetected(true)
         }
 
-        if (!FeatureFlags.toolbarMenuFeature) {
-            browserScreen {
-                verifyPageContent(estimatedReadingTime)
-            }.openThreeDotMenu {
-                verifyReaderViewAppearance(true)
-            }.closeBrowserMenuToBrowser { }
-        }
+        browserScreen {
+            verifyPageContent(estimatedReadingTime)
+        }.openThreeDotMenu {
+            verifyReaderViewAppearance(true)
+        }.closeBrowserMenuToBrowser { }
 
-        if (!FeatureFlags.toolbarMenuFeature) {
-            navigationToolbar {
-                toggleReaderView()
-                mDevice.waitForIdle()
-            }.openThreeDotMenu {
-                verifyReaderViewAppearance(false)
-            }.close { }
-        }
+        navigationToolbar {
+            toggleReaderView()
+            mDevice.waitForIdle()
+        }.openThreeDotMenu {
+            verifyReaderViewAppearance(false)
+        }.close { }
     }
 
     @Test
-    @Ignore("To be re-implemented in https://github.com/mozilla-mobile/fenix/issues/17971")
     fun verifyReaderViewAppearanceFontToggle() {
         val readerViewPage =
             TestAssetHelper.getLoremIpsumAsset(mockWebServer)
@@ -195,7 +190,6 @@ class ReaderViewTest {
     }
 
     @Test
-    @Ignore("To be re-implemented in https://github.com/mozilla-mobile/fenix/issues/17971")
     fun verifyReaderViewAppearanceFontSizeToggle() {
         val readerViewPage =
             TestAssetHelper.getLoremIpsumAsset(mockWebServer)
@@ -242,7 +236,6 @@ class ReaderViewTest {
     }
 
     @Test
-    @Ignore("To be re-implemented in https://github.com/mozilla-mobile/fenix/issues/17971")
     fun verifyReaderViewAppearanceColorSchemeChange() {
         val readerViewPage =
             TestAssetHelper.getLoremIpsumAsset(mockWebServer)

@@ -127,7 +127,6 @@ class StrictEnhancedTrackingProtectionTest {
     }
 
     @Test
-    @Ignore("To be re-implemented with the three dot menu changes https://github.com/mozilla-mobile/fenix/issues/17870")
     fun testStrictVisitDisable() {
         val trackingProtectionTest =
             TestAssetHelper.getEnhancedTrackingProtectionAsset(mockWebServer)
@@ -151,7 +150,6 @@ class StrictEnhancedTrackingProtectionTest {
         navigationToolbar {
         }.openThreeDotMenu {
             verifyThreeDotMenuExists()
-            verifySettingsButton()
         }.openSettings {
             verifyEnhancedTrackingProtectionButton()
             verifyEnhancedTrackingProtectionValue("On")

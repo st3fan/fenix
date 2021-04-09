@@ -141,10 +141,7 @@ class SyncIntegrationTest {
         navigationToolbar {
         }.enterURLAndEnterToBrowser(defaultWebPage) {
         }.openThreeDotMenu {
-            verifyAddBookmarkButton()
-            clickAddBookmarkButton()
-        }
-        browserScreen {
+        }.bookmarkPage {
         }.openThreeDotMenu {
         }.openSettings {
         }.openTurnOnSyncMenu {

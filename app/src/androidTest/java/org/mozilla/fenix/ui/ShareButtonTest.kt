@@ -45,7 +45,6 @@ class ShareButtonTest {
     }
 
     @Test
-    @Ignore("To be re-implemented with the three dot menu changes https://github.com/mozilla-mobile/fenix/issues/17979")
     fun ShareButtonAppearanceTest() {
         val defaultWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
 
@@ -58,7 +57,6 @@ class ShareButtonTest {
         // From the 3-dot menu next to the Select share menu
         navigationToolbar {
         }.openThreeDotMenu {
-            verifyShareButton()
             clickShareButton()
             verifyShareScrim()
             verifySendToDeviceTitle()
