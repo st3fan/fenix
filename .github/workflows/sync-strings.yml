@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: "Discover Fenix Beta Version"
         id: fenix-beta-version
-        uses: st3fan/fenix-beta-version@main
+        uses: st3fan/fenix-beta-version@1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: "Checkout Master Branch"
