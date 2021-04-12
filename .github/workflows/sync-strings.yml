@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: "Discover Fenix Beta Version"
         id: fenix-beta-version
-        uses: st3fan/fenix-beta-version@1.0.0
+        uses: mozilla-mobile/fenix-beta-version@1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: "Checkout Master Branch"
@@ -29,7 +29,7 @@ jobs:
           path: beta
           ref: "releases_v${{ steps.fenix-beta-version.outputs.fenix-beta-version }}.0.0"
       - name: "Sync Strings"
-        uses: st3fan/sync-strings-action@main
+        uses: mozilla-mobile/sync-strings-action@main
         with:
           src: main
           dst: beta
@@ -38,6 +38,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           path: beta
-          branch: st3fan/sync-strings-${{ steps.fenix-beta-version.outputs.major-beta-version }}
+          branch: automation/sync-strings-${{ steps.fenix-beta-version.outputs.major-beta-version }}
           title: "Sync Strings from master to releases_${{steps.fenix-beta-version.outputs.fenix-beta-version}}.0"
           body: "This (automated) PR syncs strings from `master` to `releases_${{steps.fenix-beta-version.outputs.fenix-beta-version}}.0.0`"
