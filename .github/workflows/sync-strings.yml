@@ -29,7 +29,7 @@ jobs:
           path: beta
           ref: "releases_v${{ steps.fenix-beta-version.outputs.fenix-beta-version }}.0.0"
       - name: "Sync Strings"
-        uses: st3fan/sync-strings-action@1.0.0
+        uses: st3fan/sync-strings-action@main
         with:
           src: main
           dst: beta
