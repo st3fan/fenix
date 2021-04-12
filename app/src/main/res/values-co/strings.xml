@@ -7,7 +7,7 @@
     <string name="app_name_private_4">%s (nav. privata)</string>
     <!-- Home Fragment -->
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
-    <string name="content_description_menu">Ozzioni addiziunale</string>
+    <string name="content_description_menu">Ozzioni addiziunale TEST</string>
     <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
     <string name="content_description_private_browsing_button">Attivà a navigazione privata</string>
     <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
