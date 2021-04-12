@@ -6,7 +6,7 @@ name: "Sync Strings"
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/10 * * * *'
 
 jobs:
   main:
